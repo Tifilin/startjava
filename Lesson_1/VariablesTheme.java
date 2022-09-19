@@ -69,7 +69,6 @@ public class VariablesTheme {
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
 
         int tmp = num1;
-
         num1 = num2;
         num2 = tmp;
 
@@ -114,37 +113,39 @@ public class VariablesTheme {
 
         System.out.println("\n7 Произведение и сумма цифр числа");
 
-        short number = 123;
-        byte hundreds = (byte) (number / 100);
-        byte dozens = (byte) ((number / 10) % 10);
-        byte units = (byte) (number % 10);
+        int number = 123;
+        int hundreds = number / 100;
+        int dozens = (number / 10) % 10;
+        int ones = number % 10;
 
-        System.out.println("Число N содержит:\ni.    " + hundreds + " сотен\nii.   " + dozens + " десятков\niii.  " + units + " единиц");
+        System.out.println("Число N содержит:\ni.    " + hundreds + " сотен\nii.   ");
+        System.out.print(dozens + " десятков\niii.  " + ones + " единиц");
               
         System.out.println("\n8 Вывод на консоль ASCII-арт Дюка");
 
-        char forwardslash = '/';
-        char doubleBackslash = '\\';
+        char slash = '/';
+        char backslash = '\\';
         char underscore = '_';
         char openParenthesis = '(';
         char closeParenthesis = ')';
         char space = ' ';
 
-        System.out.println("" + space + space + space + space + forwardslash + doubleBackslash + space + space + space + space);
-        System.out.println("" + space + space + space + forwardslash + space + space + doubleBackslash + space + space + space);
-        System.out.println("" + space + space + forwardslash + underscore + openParenthesis + space + closeParenthesis + doubleBackslash + space + space);
-        System.out.println("" + space + forwardslash + space + space + space + space + space + space + doubleBackslash + space);
-        System.out.println("" + forwardslash + underscore + underscore + underscore + underscore + forwardslash + doubleBackslash + underscore + underscore + doubleBackslash);
+        System.out.println("" + space + space + space + space + slash + backslash + space + space + space + space);
+        System.out.println("" + space + space + space + slash + space + space + backslash + space + space + space);
+        System.out.println("" + space + space + slash + underscore + openParenthesis + space + closeParenthesis + backslash + space + space);
+        System.out.println("" + space + slash + space + space + space + space + space + space + backslash + space);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash);
+        System.out.print("" + backslash + underscore + underscore + backslash);
 
         System.out.println("\n9 Произведение и сумма цифр числа");
 
         number = 345;
-        hundreds = (byte) (number / 100);
-        dozens = (byte) ((number / 10) % 10);
-        units = (byte) (number % 10);
+        hundreds = number / 100;
+        dozens = (number / 10) % 10;
+        ones = number % 10;
 
-        System.out.println("i.  Сумма цифр числа " + number + " = " + (hundreds + dozens + units));
-        System.out.println("ii. Произведение цифр числа " + number + " = " + hundreds * dozens * units);
+        System.out.println("i.  Сумма цифр числа " + number + " = " + (hundreds + dozens + ones));
+        System.out.println("ii. Произведение цифр числа " + number + " = " + hundreds * dozens * ones);
 
         System.out.println("\n10 Преобразование секунд");
 
@@ -152,7 +153,6 @@ public class VariablesTheme {
         int resultSeconds = secondsAmount % 60;
         int resultMinutes = secondsAmount / 60;
         int resultHours = resultMinutes / 60;
-
         resultMinutes = resultMinutes % 60;
 
         System.out.println("Получилось (ЧЧ:ММ:СС): " + resultHours + ":" + resultMinutes + ":" + resultSeconds);

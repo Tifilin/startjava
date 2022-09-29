@@ -6,9 +6,8 @@ public class IfElseStatementTheme {
         System.out.println("\n1 Перевод псевдокода на язык Java");
 
         short age = 20;
-        char sex='m';
-        boolean isSexM = 'm' == 1;
-        float length = 1.60f;
+        boolean maleGender = true;
+        float height = 1.60f;
 
         if(age > 20) {
             System.out.println("\nГоден");
@@ -16,9 +15,9 @@ public class IfElseStatementTheme {
             System.out.println("\nПока не годен");
         }
 
-        if(!isSexM == false) {
+        if(!maleGender) {
             System.out.println("Не тот пол");
-        } else if(length < 1.80) {
+        } else if(height < 1.80) {
             System.out.println("Прописать кальций");
         } else {
             System.out.println("Рассказать анекдот");
@@ -40,9 +39,11 @@ public class IfElseStatementTheme {
         short secondNumber = 33;
 
         if (firstNumber > secondNumber) {
-            System.out.println("\nМаксимальное число - " + firstNumber + "Минимальное число - " + secondNumber);
+            System.out.println("\nМаксимальное число - " + firstNumber +
+                    "Минимальное число - " + secondNumber);
         } else if (firstNumber < secondNumber) {
-            System.out.println("\nМаксимальное число - " + secondNumber + " Минимальное число - " + firstNumber);
+            System.out.println("\nМаксимальное число - " + secondNumber +
+                    " Минимальное число - " + firstNumber);
         } else {
             System.out.println("\nЧисла равны");
         }
@@ -88,25 +89,23 @@ public class IfElseStatementTheme {
 
         System.out.println("\n5 Определение буквы, числа или символа по их коду");
 
-        char letterCode = '\u0057';
-        short letterDexCode = (short) letterCode;
+        char unknownChar = '\u0057';
 
-        System.out.println("\nИсходный код: " + (short) letterCode);
+        System.out.println("\nИсходный код: " + (short) unknownChar);
 
-        if ((letterDexCode > 47) && (letterDexCode < 58)) {
-            System.out.println("Это код числа " + letterCode);
-        } else if ((letterDexCode > 64) && (letterDexCode < 91)) {
-            System.out.println("Это код большой буквы " + letterCode);
-        } else if ((letterDexCode > 96) && (letterDexCode < 123)) {
-            System.out.println("Это код маленькой буквы " + letterCode);
+        if ((unknownChar > 47) && (unknownChar < 58)) {
+            System.out.println("Это код числа " + unknownChar);
+        } else if ((unknownChar > 64) && (unknownChar < 91)) {
+            System.out.println("Это код большой буквы " + unknownChar);
+        } else if ((unknownChar > 96) && (unknownChar < 123)) {
+            System.out.println("Это код маленькой буквы " + unknownChar);
         } else {
-            System.out.println("Это не буква и не число, а символ " + letterCode);
+            System.out.println("Это не буква и не число, а символ " + unknownChar);
         }
 
         System.out.println("\n6 Определение суммы вклада и начисленных банком %");
 
         float storeSum = 300000.0f;
-        float endSum;
         short percent;
 
         if (storeSum < 100000) {
@@ -117,9 +116,9 @@ public class IfElseStatementTheme {
             percent = 10;
         }
 
-        endSum = storeSum * (100 + percent) / 100;
+        float endSum = storeSum * (100 + percent) / 100;
 
-        System.out.println("i.   Сумма вклада: " + storeSum);
+        System.out.println("\ni.   Сумма вклада: " + storeSum);
         System.out.println("ii.  Начисленный %: " + percent);
         System.out.println("iii. Итоговая сумма: " + endSum);
 
@@ -152,7 +151,8 @@ public class IfElseStatementTheme {
 
         System.out.println("\n" + historyMark + " - по истории");
         System.out.println(programMark + " - по программированию");
-        System.out.println("Средний балл оценок по предметам: " + ((historyMark + programMark) / 2));
+        System.out.println("Средний балл оценок по предметам: " +
+                ((historyMark + programMark) / 2));
         System.out.println("Средний % по предметам: " + ((historyPercent + programPercent) / 2));
 
         System.out.println("\n8 Расчет прибыли");

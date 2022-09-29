@@ -30,11 +30,11 @@ public class VariablesTheme {
         float sumDiscount = (penPrice + bookPrice) * amountDiscount / 100;
         float discountPrice = penPrice + bookPrice - sumDiscount;
 
-        System.out.println("    Сумма скидки: " + sumDiscount);
+        System.out.println("\n    Сумма скидки: " + sumDiscount);
         System.out.println("    Общая стоимость товаров со скидкой: " + discountPrice);
 
         System.out.println("\n3 Вывод на консоль слова JAVA");
-        System.out.println("   J    a  v     v  a");
+        System.out.println("\n   J    a  v     v  a");
         System.out.println("   J   a a  v   v  a a");
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
@@ -46,7 +46,7 @@ public class VariablesTheme {
         int intMax = 2147483647;
         long longMax = 9223372036854775807L;
 
-        System.out.println("    Первоначальное значение переменной типа byte: " + byteMax);
+        System.out.println("\n    Первоначальное значение переменной типа byte: " + byteMax);
         System.out.println("    Значение после инкремента переменной типа byte: " + (++byteMax));
         System.out.println("    Значение после декремента переменной типа byte: " + (--byteMax));
         System.out.println("    Первоначальное значение переменной типа short: " + shortMax);
@@ -65,7 +65,7 @@ public class VariablesTheme {
         int num2 = 5;
 
         System.out.println("5.1 Перестановка с использованием третьей переменной");
-        System.out.println("Исходные значения переменных:");
+        System.out.println("\nИсходные значения переменных:");
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
 
         int tmp = num1;
@@ -76,23 +76,23 @@ public class VariablesTheme {
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
 
         System.out.println("\n5.2 Перестановка с помощью арифметических операций");
-        System.out.println("Исходные значения переменных:");
+        System.out.println("\nИсходные значения переменных:");
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
 
-        num1 = num1 - num2;
-        num2 = num2 + num1;
+        num1 -= num2;
+        num2 += num1;
         num1 = num2 - num1;
 
         System.out.println("Новые значения переменных:");
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
 
         System.out.println("\n5.3 Перестановка с помощью побитовой операции");
-        System.out.println("Исходные значения переменных:");
+        System.out.println("\nИсходные значения переменных:");
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
 
-        num1 = num2 ^ num1;
-        num2 = num1 ^ num2;
-        num1 = num2 ^ num1;
+        num1 ^= num2;
+        num2 ^= num1;
+        num1 ^= num2;
 
         System.out.println("Новые значения переменных:");
         System.out.println("Первая:" + num1 + ", Вторая:" + num2);
@@ -118,10 +118,10 @@ public class VariablesTheme {
         int dozens = (number / 10) % 10;
         int ones = number % 10;
 
-        System.out.println("Число N содержит:\ni.    " + hundreds + " сотен\nii.   ");
-        System.out.print(dozens + " десятков\niii.  " + ones + " единиц");
+        System.out.println("\nЧисло N содержит:\ni.    " + hundreds + " сотен\nii.   " +
+                dozens + " десятков\niii.  " + ones + " единиц");
               
-        System.out.println("\n8 Вывод на консоль ASCII-арт Дюка");
+        System.out.println("\n8 Вывод на консоль ASCII-арт Дюка\n");
 
         char slash = '/';
         char backslash = '\\';
@@ -130,12 +130,16 @@ public class VariablesTheme {
         char closeParenthesis = ')';
         char space = ' ';
 
-        System.out.println("" + space + space + space + space + slash + backslash + space + space + space + space);
-        System.out.println("" + space + space + space + slash + space + space + backslash + space + space + space);
-        System.out.println("" + space + space + slash + underscore + openParenthesis + space + closeParenthesis + backslash + space + space);
-        System.out.println("" + space + slash + space + space + space + space + space + space + backslash + space);
-        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash);
-        System.out.print("" + backslash + underscore + underscore + backslash);
+        System.out.println("" + space + space + space + space + slash + backslash + space + space +
+                space + space);
+        System.out.println("" + space + space + space + slash + space + space + backslash + space +
+                space + space);
+        System.out.println("" + space + space + slash + underscore + openParenthesis + space +
+                closeParenthesis + backslash + space + space);
+        System.out.println("" + space + slash + space + space + space + space + space + space +
+                backslash + space);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash +
+                backslash + underscore + underscore + backslash);
 
         System.out.println("\n9 Произведение и сумма цифр числа");
 
@@ -144,8 +148,9 @@ public class VariablesTheme {
         dozens = (number / 10) % 10;
         ones = number % 10;
 
-        System.out.println("i.  Сумма цифр числа " + number + " = " + (hundreds + dozens + ones));
-        System.out.println("ii. Произведение цифр числа " + number + " = " + hundreds * dozens * ones);
+        System.out.println("\ni.  Сумма цифр числа " + number + " = " + (hundreds + dozens + ones));
+        System.out.println("ii. Произведение цифр числа " + number +
+                " = " + hundreds * dozens * ones);
 
         System.out.println("\n10 Преобразование секунд");
 
@@ -155,6 +160,7 @@ public class VariablesTheme {
         int resultHours = resultMinutes / 60;
         resultMinutes = resultMinutes % 60;
 
-        System.out.println("Получилось (ЧЧ:ММ:СС): " + resultHours + ":" + resultMinutes + ":" + resultSeconds);
+        System.out.println("Получилось (ЧЧ:ММ:СС): " +
+                resultHours + ":" + resultMinutes + ":" + resultSeconds);
     }
 }

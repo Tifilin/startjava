@@ -91,16 +91,16 @@ public class IfElseStatementTheme {
 
         char unknownChar = '\u0057';
 
-        System.out.println("\nИсходный код: " + (short) unknownChar);
+        System.out.println("\nИсходный символ: " + unknownChar);
 
-        if ((unknownChar > 47) && (unknownChar < 58)) {
-            System.out.println("Это код числа " + unknownChar);
-        } else if ((unknownChar > 64) && (unknownChar < 91)) {
-            System.out.println("Это код большой буквы " + unknownChar);
-        } else if ((unknownChar > 96) && (unknownChar < 123)) {
-            System.out.println("Это код маленькой буквы " + unknownChar);
+        if ((unknownChar > '/') && (unknownChar < ':')) {
+            System.out.println("Это код числа");
+        } else if ((unknownChar > '@') && (unknownChar < '[')) {
+            System.out.println("Это код большой буквы");
+        } else if ((unknownChar > '\'') && (unknownChar < '{')) {
+            System.out.println("Это код маленькой буквы");
         } else {
-            System.out.println("Это не буква и не число, а символ " + unknownChar);
+            System.out.println("Это не буква и не число, а символ");
         }
 
         System.out.println("\n6 Определение суммы вклада и начисленных банком %");

@@ -73,7 +73,6 @@ public class CyclesTheme {
                 } else if (i > 1) {
                     System.out.printf("%3s", 0);
                 } else {
-                    j = 24;
                     break;
                 }
             }
@@ -161,22 +160,17 @@ public class CyclesTheme {
 
         System.out.println("\n\n8 Проверка, является ли число палиндромом");
 
-        srcNum = 1234321;
-        int numPart1 = srcNum * 10;
-        int numPart2 = 0;
+        srcNum = 1234421;
+        int tmpNum = srcNum;
+        int reverseNum = 0;
 
-        if ((srcNum % 10) > 0) {
-            do {
-                numPart1 /= 10;
-                numPart2 = numPart2 * 10 + (numPart1 % 10);
-            } while (numPart2 <= (numPart1 / 10));
+        while (tmpNum > 0) {
+            int digit = tmpNum % 10;
+            reverseNum = reverseNum * 10 + (digit % 10);
+            tmpNum /= 10;
+        }
 
-            if ((numPart1 == (numPart2 / 10)) || (numPart1 == numPart2)) {
-                System.out.println("\n    i.  Число " + srcNum + " является палиндромом");
-            } else {
-                System.out.println("\n    i.  Число " + srcNum + " не является палиндромом");
-            }
-        } else if (srcNum == 0) {
+        if (srcNum == reverseNum) {
             System.out.println("\n    i.  Число " + srcNum + " является палиндромом");
         } else {
             System.out.println("\n    i.  Число " + srcNum + " не является палиндромом");

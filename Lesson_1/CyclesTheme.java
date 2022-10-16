@@ -146,28 +146,28 @@ public class CyclesTheme {
         
         System.out.println("\n DEC CHAR");
 
-        for (int printSymbol = 0; printSymbol <= 47; printSymbol++) {
-            if ((printSymbol % 2) > 0) {
-                System.out.printf("\n%4s%5s", printSymbol, (char) printSymbol);
+        for (int decSymbolCode = 0; decSymbolCode <= 47; decSymbolCode++) {
+            if ((decSymbolCode % 2) > 0) {
+                System.out.printf("\n%4s%5s", decSymbolCode, (char) decSymbolCode);
             }
         }
 
-        for (int printSymbol = 97; printSymbol <= 122; printSymbol++) {
-            if ((printSymbol % 2) == 0) {
-                System.out.printf("\n%4s%5s", printSymbol, (char) printSymbol);
+        for (int decSymbolCode = 97; decSymbolCode <= 122; decSymbolCode++) {
+            if ((decSymbolCode % 2) == 0) {
+                System.out.printf("\n%4s%5s", decSymbolCode, (char) decSymbolCode);
             }
         }
 
         System.out.println("\n\n8 Проверка, является ли число палиндромом");
 
         srcNum = 1234421;
-        int tmpNum = srcNum;
+        int copySrcNum = srcNum;
         int reverseNum = 0;
 
-        while (tmpNum > 0) {
-            int digit = tmpNum % 10;
+        while (copySrcNum > 0) {
+            int digit = copySrcNumm % 10;
             reverseNum = reverseNum * 10 + (digit % 10);
-            tmpNum /= 10;
+            copySrcNum /= 10;
         }
 
         if (srcNum == reverseNum) {

@@ -1,23 +1,23 @@
 public class GuessNumber {
 
     public static void main(String[] args) {
-        int srcNum = 49;
-        int minRangeNum = 0;
-        int maxRangeNum = 100;
-        int guessNum = (maxRangeNum + minRangeNum) / 2;
+        int targetNum = 49;
+        int startRange = 0;
+        int endRange = 100;
+        int guessNum = (endRange + startRange) / 2;
 
-        while (guessNum != srcNum) {
-            if (guessNum < srcNum) {
+        while (guessNum != targetNum) {
+            if (guessNum < targetNum) {
                 System.out.println("число " + guessNum + " меньше того, что загадал компьютер");
-                minRangeNum = guessNum;        
-            } else if (guessNum > srcNum) {
+                startRange = guessNum;        
+            } else if (guessNum > targetNum) {
                 System.out.println("число " + guessNum + " больше того, что загадал компьютер");
-                maxRangeNum = guessNum;
+                endRange = guessNum;
             }
-            if ((maxRangeNum - minRangeNum) < 2) {
-                guessNum = guessNum + 1;
+            if ((endRange - startRange) < 2) {
+                guessNum++;
             } else {
-                guessNum = (maxRangeNum + minRangeNum) / 2;                
+                guessNum = (endRange + startRange) / 2;                
             }
         }
 

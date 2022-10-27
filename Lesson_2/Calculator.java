@@ -2,41 +2,7 @@ public class Calculator {
 
     private int num1;
     private int num2;
-    private int result;
     private char sign;
-
-    public void calculate() {
-        result = num1;
-
-        switch (sign) {
-        case '+':
-            result += num2;
-            break;
-        case '-':
-            result -= num2;
-            break;
-        case '*':
-            result *= num2;
-            break;
-        case '/':
-            result /= num2;
-            break;
-        case '^':
-            result = 1;
-            
-            for (int i = num2; i > 1; i--) {
-                result *= num1;
-            }
-            break;
-        case '%':
-            result %= num2;
-            break;
-        default:
-            System.out.println("Неизвестный символ операции");
-        }
-
-        System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
-    }
 
     public int getNum1() {
         return num1;
@@ -60,5 +26,38 @@ public class Calculator {
 
     public void setSign(char sign) {
         this.sign = sign;
+    }
+
+    public void calculate() {
+        int result = num1;
+
+        switch (sign) {
+            case '+':
+                result += num2;
+                break;
+            case '-':
+                result -= num2;
+                break;
+            case '*':
+                result *= num2;
+                break;
+            case '/':
+                result /= num2;
+                break;
+            case '^':
+                result = 1;
+            
+                for (int i = num2; i > 1; i--) {
+                    result *= num1;
+                }
+                break;
+            case '%':
+                result %= num2;
+                break;
+            default:
+                System.out.println("Неизвестный символ операции");
+        }
+
+        System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
     }
 }
